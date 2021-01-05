@@ -1,0 +1,142 @@
+[
+    {
+      "id": "c7824803-decd-4e11-b975-2244b98ae5c8",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "entity_id": "28992bae-216a-494e-aefe-f4d40faa0376",
+      "code": "name",
+      "attribute_group": "simple",
+      "attribute_subgroup": "basic",
+      "name": "Name",
+      "label": "Name",
+      "short_label": "Name",
+      "description": "The name of the product",
+      "default_value": null,
+      "typecast": "text",
+      "testable": true,
+      "channels": [
+        {
+          "channel_id": "core",
+          "tests": [
+            {
+              "seq": 0,
+              "code": "unique",
+              "level": "warning",
+              "params": []
+            },
+            {
+              "seq": 1,
+              "code": "required",
+              "level": "critical",
+              "params": []
+            },
+            {
+              "seq": 2,
+              "code": "blacklist",
+              "level": "warning",
+              "params": [
+                {
+                  "type": "array",
+                  "value": [
+                    "fuck",
+                    "damn",
+                    "trumph"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "protect": false,
+      "global": false,
+      "display": "text",
+      "constructible": false,
+      "relations_context": null,
+      "relations_code": null
+    },
+    {
+      "id": "bf1bd44b-f498-4f9d-824d-cb205e4248c2",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "entity_id": "28992bae-216a-494e-aefe-f4d40faa0376",
+      "code": "sku",
+      "attribute_group": "simple",
+      "attribute_subgroup": "basic",
+      "name": "SKU",
+      "label": "SKU",
+      "short_label": "SKU",
+      "description": "The unique identification ID of the product",
+      "default_value": null,
+      "typecast": "text",
+      "testable": true,
+      "channels": [
+        {
+          "channel_id": "core",
+          "tests": [
+            {
+              "seq": 0,
+              "code": "unique",
+              "level": "critical",
+              "params": []
+            },
+            {
+              "seq": 1,
+              "code": "required",
+              "level": "critical",
+              "params": []
+            }
+          ]
+        }
+      ],
+      "protect": false,
+      "global": false,
+      "display": "text",
+      "constructible": false,
+      "relations_context": null,
+      "relations_code": null
+    },
+    {
+      "id": "5d2381ec-4b27-4608-a2e4-dcef883af6fb",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "entity_id": "28992bae-216a-494e-aefe-f4d40faa0376",
+      "code": "sys_categories",
+      "attribute_group": "power",
+      "attribute_subgroup": "relationships",
+      "name": "Related categories",
+      "label": "Categories",
+      "short_label": "Cat.",
+      "description": "The number of categories that is related to the product",
+      "default_value": 0,
+      "typecast": "integer",
+      "testable": true,
+      "channels": [
+        {
+          "channel_id": "core",
+          "tests": [
+            {
+              "seq": 0,
+              "code": "range",
+              "level": "warning",
+              "params": [
+                {
+                  "type": "number",
+                  "label": "From",
+                  "value": 1
+                },
+                {
+                  "type": "number",
+                  "label": "To",
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "protect": true,
+      "global": false,
+      "display": "integer",
+      "constructible": false,
+      "relations_context": null,
+      "relations_code": null
+    }
+  ]

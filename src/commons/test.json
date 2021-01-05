@@ -1,0 +1,125 @@
+[
+    {
+      "id": "6d1ed44b-a832-4037-be48-c22c26f56f9d",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "code": "unique",
+      "name": "Unique",
+      "position": 0,
+      "icon": "sheet",
+      "description": "The value in the attribute have to be unique across all rows in the entity scope",
+      "entityScope": [
+        "product",
+        "asset",
+        "category"
+      ],
+      "typecastScope": [
+        "text",
+        "integer",
+        "decimal",
+        "datetime",
+        "boolean",
+        "html"
+      ],
+      "parameters": [],
+      "subchannelScope": false,
+      "setLevel": true,
+      "defaultLevel": "critical",
+      "active": true
+    },
+    {
+      "id": "6acb6456-435b-4531-a103-5389e516ec47",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "code": "required",
+      "name": "Required",
+      "position": 1,
+      "icon": "sheet",
+      "description": "There has to be value in the attribute",
+      "entityScope": [
+        "product",
+        "asset",
+        "category"
+      ],
+      "typecastScope": [
+        "text",
+        "integer",
+        "decimal",
+        "datetime",
+        "html"
+      ],
+      "parameters": [],
+      "subchannelScope": false,
+      "setLevel": true,
+      "defaultLevel": "critical",
+      "active": true
+    },
+    {
+      "id": "4654d92b-9168-449f-a72d-8da2169389ad",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "code": "blacklist",
+      "name": "Blacklist",
+      "position": 2,
+      "icon": "sheet",
+      "description": "The value in the attribute can't have any of a predefined list of words",
+      "entityScope": [
+        "product",
+        "asset",
+        "category"
+      ],
+      "typecastScope": [
+        "text",
+        "html"
+      ],
+      "parameters": [
+        {
+          "code": "words",
+          "name": "Words",
+          "typecast": "array",
+          "default-value": null,
+          "position": 0
+        }
+      ],
+      "subchannelScope": false,
+      "setLevel": true,
+      "defaultLevel": "warning",
+      "active": true
+    },
+    {
+      "id": "eb9033ef-4733-42b1-b483-1c74144ff65e",
+      "organization_id": "28a83b47-a6b3-4634-8125-f0afa723427c",
+      "code": "range",
+      "name": "Range",
+      "position": 3,
+      "icon": "sheet",
+      "description": "The value in the attribute have to be between two values - both included",
+      "entityScope": [
+        "product",
+        "asset",
+        "category"
+      ],
+      "typecastScope": [
+        "integer",
+        "decimal",
+        "datetime"
+      ],
+      "parameters": [
+        {
+          "code": "from",
+          "name": "From",
+          "typecast": "number",
+          "default-value": 1,
+          "position": 0
+        },
+        {
+          "code": "to",
+          "name": "To",
+          "typecast": "number",
+          "default-value": 10,
+          "position": 1
+        }
+      ],
+      "subchannelScope": false,
+      "setLevel": true,
+      "defaultLevel": "warning",
+      "active": true
+    }
+]

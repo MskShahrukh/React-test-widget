@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+/*  my styles below */
+.critical {
+  color: #e02712;
+}
+
+.warning {
+  color: #e0bb12;
+}
+
+.unique {
+  color: blue;
+}
+
+.accordion {
+  max-width: 400px;
+}
+
+.accordion-header {
+  cursor: pointer;
+}
+
+.accordion-body {
+  /* display: none; */
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.body {
+  margin: 10px;
+  padding: 10px;
+}
+
+.each-attribute {
+  margin: 5px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.each-attribute:hover {
+  text-shadow: 1px 2px 3px silver;
+  opacity: 0.8;
+}
+
+.padded-10 {
+  padding: 10px;
+}
